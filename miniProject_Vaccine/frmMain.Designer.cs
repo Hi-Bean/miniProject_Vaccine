@@ -34,8 +34,8 @@ namespace miniProject_Vaccine
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.병원열기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.연결하기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -104,20 +104,12 @@ namespace miniProject_Vaccine
             this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox2.ContextMenuStrip = this.contextMenuStrip1;
             this.textBox2.Location = new System.Drawing.Point(-1, -2);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(514, 127);
             this.textBox2.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(115, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "<Info>";
             // 
             // button1
             // 
@@ -128,6 +120,15 @@ namespace miniProject_Vaccine
             this.button1.Text = "예약하기";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(115, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "<Info>";
+            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -135,27 +136,27 @@ namespace miniProject_Vaccine
             this.병원열기ToolStripMenuItem,
             this.연결하기ToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 80);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(139, 52);
             // 
             // 병원열기ToolStripMenuItem
             // 
             this.병원열기ToolStripMenuItem.Name = "병원열기ToolStripMenuItem";
-            this.병원열기ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.병원열기ToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
             this.병원열기ToolStripMenuItem.Text = "병원열기";
             // 
             // 연결하기ToolStripMenuItem
             // 
             this.연결하기ToolStripMenuItem.Name = "연결하기ToolStripMenuItem";
-            this.연결하기ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.연결하기ToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
             this.연결하기ToolStripMenuItem.Text = "연결하기";
             // 
-            // Form1
+            // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.splitContainer1);
-            this.Name = "Form1";
+            this.Name = "frmMain";
             this.Text = "Form1";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
