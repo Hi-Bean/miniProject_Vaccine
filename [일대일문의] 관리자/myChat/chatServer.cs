@@ -95,11 +95,10 @@ namespace myChat
                 {
                     NetworkStream ns = tcp[i].GetStream();
                     string snn = sname[i];
-                    //string sNum = snn[1];
                     if (ns.DataAvailable)
                     {                        
                         int n = ns.Read(bArr, 0, 512);
-                        AddText($"{snn} : {Encoding.Default.GetString(bArr, 0, n)}", 1);
+                        AddText($"[{snn}] : {Encoding.Default.GetString(bArr, 0, n)}", 1);
                     }
                 }
                 Thread.Sleep(100);
@@ -137,8 +136,9 @@ namespace myChat
                     if (tcp[i].Client.RemoteEndPoint.ToString() == sbClientList.Text)
                         j = i;
                 }
-
                 tcp[j].Client.Send(Encoding.Default.GetBytes(tbClient.Text+"\r\n"));
+                string sn = sname[j];
+                AddText($"[{sn} 답변] : {tbClient.Text}", 1);
                 tbClient.Text = "";
             }
         }

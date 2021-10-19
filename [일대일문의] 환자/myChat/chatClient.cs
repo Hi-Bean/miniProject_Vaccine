@@ -133,7 +133,7 @@ namespace myChat
                 if (sock.Available > 0)
                 {
                     int n = sock.Receive(bArr);
-                    AddText($"{Encoding.Default.GetString(bArr, 0, n)}\r\n\r\n", 1);
+                    AddText("[답변] : "+$"{Encoding.Default.GetString(bArr, 0, n)}\r\n\r\n", 1);
                 }
                 Thread.Sleep(100);
             }
@@ -147,9 +147,9 @@ namespace myChat
             {
                 if (sock != null)
                 {
-                    string SendServer = tbClient.Text+"\r\n";
+                    string SendServer = tbClient.Text + "\r\n";
                     sock.Send(Encoding.Default.GetBytes(SendServer));
-
+                    AddText("[내 문의사항] : " + tbClient.Text + "\r\n", 1);
                     tbClient.Text = "";
                 }
             }
@@ -168,7 +168,7 @@ namespace myChat
             }
             listen = new TcpListener(9000);
             listen.Start();
-            AddText($"서버가 [{"9000"}] Port에서 시작되었습니다.\r\n\r\n", 1);
+            AddText($"서버가 [{ConnectPort}] Port에서 시작되었습니다.\r\n\r\n", 1);
 
             threadServer = new Thread(ServerProcess);
             threadServer.Start();
